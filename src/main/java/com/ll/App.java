@@ -26,6 +26,11 @@ public class App {
                 continue;
             }
 
+            if (cmd.equals("수정")){
+                Modify modify = new Modify(WS, A, scanner);
+                continue;
+            }
+
             if (cmd.equals("목록")){
                 List list = new List(Count, WS, A);
                 continue;
@@ -33,6 +38,11 @@ public class App {
 
             if (cmd.equals("종료")){
                 break;
+            }
+
+            else {
+                System.out.println("지정되지 않은 명령 입니다.");
+                System.out.println("올바른 명령을 입력하여 주십시오");
             }
 
         }

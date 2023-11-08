@@ -8,6 +8,11 @@ public class List {
         System.out.println("---------------------------");
 
         for(int length = Count; length > 0; length--) {
+
+            if (WS.get(length-1) == null && A.get(length-1) == null){
+                continue;
+            }
+
             System.out.printf("%d / %s / %s\n", length, A.get(length-1), WS.get(length-1));
         }
     }
