@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class App {
     static Scanner scanner = new Scanner(System.in);
+    static int Count = 0;
     public void run() {
         System.out.println("== 명언 앱 ==");
 
@@ -12,10 +13,9 @@ public class App {
             String cmd = scanner.nextLine();
 
             if (cmd.equals("등록")){
-                System.out.print("명언 : ");
-                String WS = scanner.nextLine();
-                System.out.print("작가 : ");
-                String A = scanner.nextLine();
+
+                Register register = new Register(Count, scanner);
+                Count++;
 
                 continue;
             }
