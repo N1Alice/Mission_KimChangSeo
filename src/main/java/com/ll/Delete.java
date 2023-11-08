@@ -9,6 +9,12 @@ public class Delete {
         int Dnum = scanner.nextInt();
         scanner.nextLine();
 
+        if (WS.get(Dnum-1) == null && A.get(Dnum-1) == null)
+        {
+            System.out.println(Dnum +"번 명언은 존재하지 않습니다.");
+            return;
+        }
+
         WS.set(Dnum-1, null);
         A.set(Dnum-1, null);
 
