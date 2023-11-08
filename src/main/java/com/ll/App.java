@@ -16,10 +16,13 @@ public class App {
             String cmd = scanner.nextLine();
 
             if (cmd.equals("등록")){
-
                 Register register = new Register(Count, scanner, WS, A);
                 Count++;
+                continue;
+            }
 
+            if (cmd.equals("삭제")){
+                Delete delete = new Delete(WS, A, scanner);
                 continue;
             }
 
